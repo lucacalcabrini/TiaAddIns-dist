@@ -10,17 +10,42 @@ di questa repository e, se ne trova una più recente, la scarica e si riavvia.
 
 | File | Cosa è |
 |---|---|
-| `CtfProDiag.App-<versione>.zip` | applicazione desktop, da installare sulla macchina dove gira TIA Portal |
-| `CtfProDiag-V21.addin` | add-in TIA Portal, da copiare in `Portal V21\AddIns\` con TIA chiuso |
+| `CtfProDiag.App-<versione>.zip` | applicazione desktop, da usare sulla macchina dove gira TIA Portal |
+
+Dalla 0.11.2 la release contiene **solo lo zip**. Il vecchio add-in
+`CtfProDiag-V21.addin` non viene più pubblicato: serviva a lanciare
+l'applicazione dal menu di TIA, ma dalla 0.10.0 l'applicazione trova da sola le
+sessioni di TIA aperte e fa scegliere su quale lavorare. Chi ha già l'add-in
+installato può tenerlo, continua a funzionare; nelle release precedenti il file
+è ancora scaricabile.
 
 ## Installazione
 
-L'applicazione si scompatta in una cartella qualsiasi e si avvia. Al primo avvio
-crea le proprie impostazioni in `%APPDATA%\CtfProDiag\settings.json`, dove si
-configurano cartella dei log, cartella delle configurazioni e versione di TIA.
+Scarica lo zip ed estrailo in una cartella qualsiasi, dove vuoi. Avvia
+`CtfProDiag.App.exe`.
 
-L'add-in va installato una volta sola e non richiede aggiornamenti frequenti:
-serve solo a richiamare l'applicazione dal menu contestuale di TIA Portal.
+L'applicazione è **portatile**: tutto quello che legge e scrive sta sotto la
+cartella da cui viene lanciata.
+
+```
+CtfProDiag\
+   CtfProDiag.App.exe   manuale.html   settings.json
+   Standard\    i file .dat di riferimento da applicare ai progetti
+   Progetti\    una cartella per progetto, con le fotografie prima e dopo
+   Log\
+```
+
+Sposti la cartella dove vuoi e non perdi niente. Non serve installare altro: le
+librerie Openness vengono trovate da sole nella TIA Portal già presente sulla
+macchina.
+
+Il manuale utente è dentro lo zip e si apre anche dal menu **? → Manuale utente**.
+
+## Aggiornamento
+
+All'avvio l'applicazione controlla le release di questa repository e, se ce n'è
+una più recente, propone il passaggio. L'aggiornamento sovrascrive i file del
+programma e **non tocca** le tue cartelle `Standard\`, `Progetti\` e `Log\`.
 
 ## Requisiti
 
