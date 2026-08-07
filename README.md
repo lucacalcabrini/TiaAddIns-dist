@@ -39,6 +39,13 @@ Sposti la cartella dove vuoi e non perdi niente. Non serve installare altro: le
 librerie Openness vengono trovate da sole nella TIA Portal già presente sulla
 macchina.
 
+Dalla 0.11.4 il contenuto di `Standard\` **non va procurato**: al primo avvio
+l'applicazione ci scrive da sola i riferimenti dello standard CTF, e le pagine
+funzionano subito. Se il tuo standard è diverso, sostituisci il file in
+`Standard\` con il tuo: un riferimento che c'è già non viene mai toccato, né al
+riavvio né agli aggiornamenti. Per tornare a quello di serie si cancella il file
+e si riavvia.
+
 Il manuale utente è dentro lo zip e si apre anche dal menu **? → Manuale utente**.
 
 ## Aggiornamento
