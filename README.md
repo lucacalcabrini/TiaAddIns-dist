@@ -30,7 +30,7 @@ cartella da cui viene lanciata.
 ```
 CtfProDiag\
    CtfProDiag.App.exe   manuale.html   settings.json
-   Standard\    i file .dat di riferimento da applicare ai progetti
+   Standard\    i riferimenti da applicare ai progetti (.dat e .json)
    Progetti\    una cartella per progetto, con le fotografie prima e dopo
    Log\
 ```
